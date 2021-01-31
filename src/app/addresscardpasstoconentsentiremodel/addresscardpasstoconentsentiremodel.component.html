@@ -1,0 +1,25 @@
+<h3>Understanding Passing Data to Component whole Model Object</h3>
+<hr>
+<div class="container">
+ <div class="col-xs-12">
+<div class="row">
+ <label>Name:</label>
+<div * ngIf="user.name">{{user.uname}}</div>
+</div>
+<div class="row">
+    <label>Designation:</label>
+    <div * ngIf="user.designation">{{user.designation}}</div>
+   </div>
+   <div class="row">
+    <label>Address</label>
+    <div * ngIf="user.address">{{user.address}}</div>
+   </div>
+   <div * ngIf="user.phone">
+   <div class="row" *ngIf="user.phone.length">
+   <label>Phone</label>
+      <p *ngFor="let phoneNumber of user.phone">{{phoneNumber}}</p>
+   </div>
+   </div>
+</div>   
+</div>
+

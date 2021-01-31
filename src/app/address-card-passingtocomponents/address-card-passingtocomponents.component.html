@@ -1,0 +1,28 @@
+<h3>Understanding Passing Data to Component Inline and Click Events</h3>
+<hr>
+<div class="container">
+<div class="col-xs-12">
+<div class="row">
+ <label>Name:</label>
+{{user.uname}}
+</div>
+<div>
+<div>
+ <button type="button" class ="btn btn-primary" (click)="OnCollapseExpand()">Submit</button>   
+</div>
+<div class="row" *ngIf="isCollpased">
+    <label>Designation:</label>
+    {{user.designation}}
+    <div class="row">
+    <label>Address</label>
+    {{user.address}}
+   </div>
+   <div class="row" *ngIf="user.phone.length">
+   <label>Phone</label>
+   <p *ngFor="let phoneNumber of user.phone">{{phoneNumber}}</p>
+   </div>
+</div>  
+</div>
+</div>   
+</div>
+

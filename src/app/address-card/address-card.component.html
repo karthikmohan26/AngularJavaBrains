@@ -1,0 +1,27 @@
+<h3>Understanding ngFor,ngIf,String Interpolation & DataBinding in Component</h3>
+<hr>
+<div class="container">
+ <div class="col-xs-12">
+    <div class="row">
+        <label>String Interpolation:</label>
+       {{message}}
+       </div>
+<div class="row">
+ <label>Name:</label>
+{{user.uname}}
+</div>
+<div class="row">
+    <label>Designation:</label>
+    {{user.designation}}
+   </div>
+   <div class="row">
+    <label>Address</label>
+    {{user.address}}
+   </div>
+   <div class="row" *ngIf="user.phone.length">
+   <label>Phone</label>
+   <p *ngFor="let phoneNumber of user.phone">{{phoneNumber}}</p>
+   </div>
+</div>   
+</div>
+
